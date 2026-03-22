@@ -11,9 +11,6 @@ jobs:
     name: Audit Formulae
     runs-on: macos-latest
     steps:
-      - name: Set up Homebrew
-        uses: Homebrew/actions/setup-homebrew@master
-
       - name: Checkout tap
         uses: actions/checkout@v4
 
