@@ -137,7 +137,7 @@ configure_doppler() {
   [[ -z "${DOPPLER_TOKEN:-}" ]] && return 0
   command -v doppler &>/dev/null || return 0
 
-  doppler setup --project homebrew-tap --config dev --no-interactive 2>/dev/null \
+  doppler setup --project everruns-dev --config dev --no-interactive 2>/dev/null \
     && info "Doppler configured" || warn "Failed to configure Doppler"
 }
 
