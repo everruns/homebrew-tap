@@ -1,0 +1,29 @@
+name: Homebrew CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  audit:
+    name: Audit Formulae
+    runs-on: macos-latest
+    steps:
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Checkout tap
+        uses: actions/checkout@v4
+
+      - name: Tap locally
+        run: |
+          mkdir -p "$(brew --repository)/Library/Taps/everruns"
+          ln -s "$GITHUB_WORKSPACE" "$(brew --repository)/Library/Taps/everruns/homebrew-tap"
+
+      - name: Audit formulae
+        run: brew audit --strict Formula/*.rb
+
+      - name: Style check
+        run: brew style Formula/*.rb
