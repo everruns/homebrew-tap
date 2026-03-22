@@ -1,15 +1,25 @@
 class Everruns < Formula
   desc "Command-line interface for Everruns - headless durable agentic harness engine"
   homepage "https://github.com/everruns/everruns"
-  url "https://github.com/everruns/everruns/archive/refs/tags/v0.8.6.tar.gz"
-  sha256 "f9426e2d89bb0eba81b0ab5ec7723580820a18d38c143f85cf8944ce40ec0efd"
+  version "0.8.7"
   license "MIT"
 
-  depends_on "rust" => :build
+  on_macos do
+    on_arm do
+      url "https://github.com/everruns/everruns/releases/download/v0.8.7/everruns-aarch64-apple-darwin.tar.gz"
+      sha256 "a6c6940bd4d106985df6a10baed5440883ed06cac710bbb6733f3087f9f470da"
+    end
+  end
+
+  on_linux do
+    on_intel do
+      url "https://github.com/everruns/everruns/releases/download/v0.8.7/everruns-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "ba5100368f1d8832140d296b1b33506c6ec731b1c3e7210363086325cbcbeab2"
+    end
+  end
 
   def install
-    system "cargo", "build", "--release", "--package", "everruns-cli"
-    bin.install "target/release/everruns"
+    bin.install "everruns"
   end
 
   test do
