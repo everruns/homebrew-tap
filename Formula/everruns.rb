@@ -1,7 +1,6 @@
 class Everruns < Formula
   desc "Command-line interface for Everruns - headless durable agentic harness engine"
   homepage "https://github.com/everruns/everruns"
-  version "0.8.7"
   license "MIT"
 
   on_macos do
