@@ -29,4 +29,4 @@ jobs:
         run: brew audit --strict ${{ steps.formulae.outputs.names }}
 
       - name: Style check
-        run: brew style everruns/tap
+        run: brew style ${{ steps.formulae.outputs.names }}
