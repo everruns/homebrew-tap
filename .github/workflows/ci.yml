@@ -1,0 +1,32 @@
+name: Homebrew CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  audit:
+    name: Audit Formulae
+    runs-on: macos-latest
+    steps:
+      - name: Checkout tap
+        uses: actions/checkout@v4
+
+      - name: Tap locally
+        run: |
+          mkdir -p "$(brew --repository)/Library/Taps/everruns"
+          ln -s "$GITHUB_WORKSPACE" "$(brew --repository)/Library/Taps/everruns/homebrew-tap"
+
+      - name: Discover formulae
+        id: formulae
+        run: |
+          names=$(ls Formula/*.rb 2>/dev/null | xargs -I{} basename {} .rb | tr '\n' ' ')
+          echo "names=$names" >> "$GITHUB_OUTPUT"
+
+      - name: Audit formulae
+        run: brew audit --strict ${{ steps.formulae.outputs.names }}
+
+      - name: Style check
+        run: brew style ${{ steps.formulae.outputs.names }}
