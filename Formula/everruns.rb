@@ -18,8 +18,10 @@ class Everruns < Formula
 
   on_linux do
     depends_on arch: :x86_64
-    url "https://github.com/everruns/everruns/releases/download/v0.8.9/everruns-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "a35f30b33496c4b8019dc8f2a928fe93e3148e4d8d4e7df8b1fecf9529766864"
+    if Hardware::CPU.intel?
+      url "https://github.com/everruns/everruns/releases/download/v0.8.9/everruns-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "a35f30b33496c4b8019dc8f2a928fe93e3148e4d8d4e7df8b1fecf9529766864"
+    end
   end
 
   def install
