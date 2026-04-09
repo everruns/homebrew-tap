@@ -4,7 +4,6 @@
 class Everruns < Formula
   desc "Open-source AI agent platform"
   homepage "https://github.com/everruns/everruns"
-  version "0.8.9"
   license "Apache-2.0"
 
   on_macos do
