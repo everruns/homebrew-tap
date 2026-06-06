@@ -8,11 +8,11 @@ class Everruns < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/everruns/everruns/releases/download/v0.8.38/everruns-aarch64-apple-darwin.tar.gz"
-      sha256 "e63f777c149191a53ec801aa8fb7b56f1aa7738587c37fd7792a4f44cba360be"
+      url "https://github.com/everruns/everruns/releases/download/v0.9.0/everruns-aarch64-apple-darwin.tar.gz"
+      sha256 "4b6aa777f58371f90f7aed99b6f92e6923de562f1141eb03e4d62e47712a068d"
     else
-      url "https://github.com/everruns/everruns/releases/download/v0.8.38/everruns-x86_64-apple-darwin.tar.gz"
-      sha256 "41412ade39a3fddff8c954440e8f89f10ffe38b9d7d859988aaac4db0bc12b31"
+      url "https://github.com/everruns/everruns/releases/download/v0.9.0/everruns-x86_64-apple-darwin.tar.gz"
+      sha256 "8b6b6df6e660d0a8f1e9f3beef23e29876e11263872de6de31307dc047c89546"
     end
   end
 
@@ -21,8 +21,8 @@ class Everruns < Formula
     if Hardware::CPU.arm?
       odie "Linux ARM is not supported by this formula"
     else
-      url "https://github.com/everruns/everruns/releases/download/v0.8.38/everruns-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "65426bca8b1cc4a5303718e83207d8c0590d3c86164fa393c07aba85948804f6"
+      url "https://github.com/everruns/everruns/releases/download/v0.9.0/everruns-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "2c365a0d13bddd7f16b6e0ea9a93fc0d889c6b833f414bde3592e73acc5f373e"
     end
   end
 
