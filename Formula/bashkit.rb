@@ -4,23 +4,22 @@
 class Bashkit < Formula
   desc "Virtual bash interpreter with sandboxed execution"
   homepage "https://github.com/everruns/bashkit"
-  version "0.9.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/everruns/bashkit/releases/download/v0.9.0/bashkit-aarch64-apple-darwin.tar.gz"
-      sha256 "788184f65eef53939096c9b2b91f76836353675f3be5b76ec4a841a025d65825"
+      url "https://github.com/everruns/bashkit/releases/download/v0.10.0/bashkit-aarch64-apple-darwin.tar.gz"
+      sha256 "386c741500bf75326c1c8ca6f35996197ee86a5b18116a0605d0c2ede0839755"
     else
-      url "https://github.com/everruns/bashkit/releases/download/v0.9.0/bashkit-x86_64-apple-darwin.tar.gz"
-      sha256 "c26ef767cc0ab157b21fee8e5589177eca8e10960d02253c7665f18addd7dced"
+      url "https://github.com/everruns/bashkit/releases/download/v0.10.0/bashkit-x86_64-apple-darwin.tar.gz"
+      sha256 "a85376cea71a6e097a9678c914d177c2e8261a6aeae063026ae7e7d695b673ef"
     end
   end
 
   on_linux do
     depends_on arch: :x86_64
-    url "https://github.com/everruns/bashkit/releases/download/v0.9.0/bashkit-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "36b57dc7ab513050190a93e72568e152ad63473424a93b760766438fc376e7e0"
+    url "https://github.com/everruns/bashkit/releases/download/v0.10.0/bashkit-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "f9ca31bcc26caf1dc3e0b4e55c53aa7821ccf3d244d739278613fbcaf8e4c68c"
   end
 
   def install
