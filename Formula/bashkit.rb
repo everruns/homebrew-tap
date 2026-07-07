@@ -8,18 +8,18 @@ class Bashkit < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/everruns/bashkit/releases/download/v0.12.0/bashkit-aarch64-apple-darwin.tar.gz"
-      sha256 "e9c3d43180edef79e5dd8bedd85a8fd5c1b33765bd8033ac84d36e559eda2058"
+      url "https://github.com/everruns/bashkit/releases/download/v0.13.0/bashkit-aarch64-apple-darwin.tar.gz"
+      sha256 "8c5154cb4eb286fc372810a5098d3480eecec6f884932bdcf487345d635523b9"
     else
-      url "https://github.com/everruns/bashkit/releases/download/v0.12.0/bashkit-x86_64-apple-darwin.tar.gz"
-      sha256 "984f5c3e103a684535bb90659ae5b2affd3ae47bfad2fc906213fdc93b5f35a3"
+      url "https://github.com/everruns/bashkit/releases/download/v0.13.0/bashkit-x86_64-apple-darwin.tar.gz"
+      sha256 "69f001eec1020e5038c7659fbe0f2778bc05ee8d78aaa925c10f8c0a561bf6ed"
     end
   end
 
   on_linux do
     depends_on arch: :x86_64
-    url "https://github.com/everruns/bashkit/releases/download/v0.12.0/bashkit-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "5d9314fe1bca14cfb7fd0e6bb379a715ff5c709369d7d6f029f519286d9bc28c"
+    url "https://github.com/everruns/bashkit/releases/download/v0.13.0/bashkit-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "a847bad89b164f7891a73ce4eefbfb3b3bc08000d09de6a6bff0c8595e73d303"
   end
 
   def install
