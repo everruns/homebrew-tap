@@ -12,18 +12,18 @@ class Mira < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/everruns/mira/releases/download/v0.4.0/mira-aarch64-apple-darwin.tar.gz"
-      sha256 "f1996099deb0eeb24c8c738f8fce924b1817fcb654baffc36c7d4b9cd422ca5f"
+      url "https://github.com/everruns/mira/releases/download/v0.5.0/mira-aarch64-apple-darwin.tar.gz"
+      sha256 "e0477de7fe815117da6fa5936cc381c7d747d0a795aed296719c1acf137889dd"
     else
-      url "https://github.com/everruns/mira/releases/download/v0.4.0/mira-x86_64-apple-darwin.tar.gz"
-      sha256 "b8a56e606254a3c721bd4c0a5cc1da92c5664c8cf2953e30c00c5ec26bd2f14c"
+      url "https://github.com/everruns/mira/releases/download/v0.5.0/mira-x86_64-apple-darwin.tar.gz"
+      sha256 "e2089c810e06dc078cf88ced9ea1dd88071cb117d65b763ab6c9552c8dee354a"
     end
   end
 
   on_linux do
     depends_on arch: :x86_64
-    url "https://github.com/everruns/mira/releases/download/v0.4.0/mira-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "913dc4718d48a8e406a773f6a321eac2614b1c957c8bffd9abb5309e126df100"
+    url "https://github.com/everruns/mira/releases/download/v0.5.0/mira-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "b69d1a9af34d83aae87aad2453cf642739de9e0859e043b2b6571839ef7462fc"
   end
 
   def install
