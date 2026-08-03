@@ -12,18 +12,18 @@ class Yolop < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/everruns/yolop/releases/download/v0.13.0/yolop-aarch64-apple-darwin.tar.gz"
-      sha256 "428774dc7c4e23f939b3810169cfdeceda2547fc10596cd2d089d6a46e11e33f"
+      url "https://github.com/everruns/yolop/releases/download/v0.14.0/yolop-aarch64-apple-darwin.tar.gz"
+      sha256 "1bd05b80a11229d31cca261d8518f54ea16a6d50ebfc7e9e5e55ac43ef2ce3b8"
     else
-      url "https://github.com/everruns/yolop/releases/download/v0.13.0/yolop-x86_64-apple-darwin.tar.gz"
-      sha256 "604c5f74ea1cde4df03b7bd55efb1b014ab83e93b63cce530577a1ddb9617b6b"
+      url "https://github.com/everruns/yolop/releases/download/v0.14.0/yolop-x86_64-apple-darwin.tar.gz"
+      sha256 "929b3b5203b8bfcc50dc0698e4ce759b434fa31831b59adad380f5760f1e7bf1"
     end
   end
 
   on_linux do
     depends_on arch: :x86_64
-    url "https://github.com/everruns/yolop/releases/download/v0.13.0/yolop-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "668a29771fc05e2f9c7d00cda6a93d38fd4085db6d79d6b0c5652bd2094250c5"
+    url "https://github.com/everruns/yolop/releases/download/v0.14.0/yolop-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "6a50665ea0f7cf6e52a1307651b8a328d56180236fea3ea9b6b37cdc12fb864c"
   end
 
   def install
