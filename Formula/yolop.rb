@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 class Yolop < Formula
-  desc "Minimal terminal coding agent built on everruns-host"
+  desc "Minimal terminal coding agent built on everruns-core"
   homepage "https://github.com/everruns/yolop"
   # No explicit  — Homebrew scans it from the download URL
   # (the release tag in the path). Setting it again trips
@@ -12,18 +12,18 @@ class Yolop < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/everruns/yolop/releases/download/v0.18.4/yolop-aarch64-apple-darwin.tar.gz"
-      sha256 "d71362eb0d233af7d8c101712d713aeaedc420c5a7d0a91da81a3d574b837a11"
+      url "https://github.com/everruns/yolop/releases/download/v0.19.0/yolop-aarch64-apple-darwin.tar.gz"
+      sha256 "b75e9d98f7413a1d7dfdd273fd40e2192e6edeb9e597808cd06c1bd77141eb79"
     else
-      url "https://github.com/everruns/yolop/releases/download/v0.18.4/yolop-x86_64-apple-darwin.tar.gz"
-      sha256 "2293ef94dbe357c11360f670b781f1c07cde7ef28b77b69902ddb37b8eb4df33"
+      url "https://github.com/everruns/yolop/releases/download/v0.19.0/yolop-x86_64-apple-darwin.tar.gz"
+      sha256 "eb53ce39609d7af7e0ac2994c7a8f210c929d5736af853966cb4ee29bbfbfce9"
     end
   end
 
   on_linux do
     depends_on arch: :x86_64
-    url "https://github.com/everruns/yolop/releases/download/v0.18.4/yolop-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "4c1f7bc60a0e2a1e84fca8394320af92f6142581ef2d2f859aaea54d436662be"
+    url "https://github.com/everruns/yolop/releases/download/v0.19.0/yolop-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "ebc2618b16063ac2304e54c2613aff9a7eb98bd2fa3a97adc930c9d05f915a0c"
   end
 
   def install
